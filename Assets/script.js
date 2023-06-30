@@ -156,7 +156,7 @@ const timerDisplay = () => {
     countdown = setInterval(() => {
         count--;
         // timer may not work
-        timeLeft.innerHTML = '${count}s';
+        timeLeft.innerHTML =  '${count}s';
         if (count == 0) {
             clearInterval(countdown);
             displayNext();
@@ -184,6 +184,39 @@ function quizCreater() {
         countOfQuestion.innerHTML = 1 + " of " + quizArray.length + " Question ";
 
         let question_DIV = document.createElement("p");
+        question_DIV.classList.add("question");
+        question_DIV.innerHTML = i.question; 
+        div.appendChild(question_DIV);
+
+        // can't get this to work
+        div.innerHTML += '
+        <button class="option-div" onclick="checker(this)"> ${i.options[0]}</button>
+        <button class="option-div" onclick="checker(this)"> ${i.options[1]}</button>
+        <button class="option-div" onclick="checker(this)"> ${i.options[2]}</button>
+        <button class="option-div" onclick="checker(this)"> ${i.options[3]}</button>;
+        quizContainer.appendChild(div)';
     }
+}
+
+function checker(userOption){
+    let userSolution =userOption.innerText;
+    let question = document.getElementsByClassName("container-mid")[questionCount];
+    let options = question.querySelectorAll(".option-div");
+
+    if(userSolution === quizArray[questionCount].correct){
+        userOption.classList.add("correct");
+        scoreCount++;
+    }
+    else {
+        userOption.classList.add("incorrect");
+
+        options.forEach((element) => {
+            if ((element.innerText = quizArray[questionCount].correct)){
+                element.classList.add("correct");
+            }
+
+        });
+    }
+    clearInterval(countdown);
 }
 
