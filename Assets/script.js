@@ -164,4 +164,26 @@ const timerDisplay = () => {
     }, 1000);
 }
 
-const quizDisplay
+const quizDisplay = (questionCount) => {
+    let quizCards = document.querySelectorAll(".container-mid");
+
+    quizCards.forEach((card) => {
+        card.classList.add("hide");
+    });
+    quizCards[questionCount].classList.remove("hide");
+};
+
+function quizCreater() {
+    quizArray.sort(() => Math.random() - 0.5);
+
+    for (let i of quizArray) {
+        i.options.sort(() => Math.random() - 0.5);
+        let div = document.createElement("div");
+        div.classList.add("container-mid", "hide");
+
+        countOfQuestion.innerHTML = 1 + " of " + quizArray.length + " Question ";
+
+        let question_DIV = document.createElement("p");
+    }
+}
+
