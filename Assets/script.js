@@ -127,3 +127,9 @@ const quizArray = [
         correct: "Valletta",
     },
 ];
+
+restart.addEventListener("click", () => {
+    initial();
+    displayContainer.classList.remove("hide");
+    scoreContainer.classList.add("hide");
+});
