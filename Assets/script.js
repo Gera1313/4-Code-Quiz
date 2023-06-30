@@ -133,3 +133,35 @@ restart.addEventListener("click", () => {
     displayContainer.classList.remove("hide");
     scoreContainer.classList.add("hide");
 });
+
+nextBtn.addEventListener("click", (displayNext = () => {
+    questionCount += 1;
+
+    if(questionCount == quizArray.length) {
+        displayContainer.classList.add("hide");
+        userScore.innerHTML = "Your Score is " +
+        scoreCount + " out of " + questionCount;
+    }
+    else {
+        countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + "Question";
+
+        quizDisplay(questionCount);
+        count = 11;
+        clearInterval(countdown);
+        timerDisplay();
+    }
+}));
+
+const timerDisplay = () => {
+    countdown = setInterval(() => {
+        count--;
+        // timer may not work
+        timeLeft.innerHTML = '${count}s';
+        if (count == 0) {
+            clearInterval(countdown);
+            displayNext();
+        }
+    }, 1000);
+}
+
+const quizDisplay
