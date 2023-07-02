@@ -43,12 +43,13 @@ You click on 'Start Quiz
 ![You click on 'Start Quiz'](./Assets/Images/Home.png)
 
 The question and option cards
+
 ![The question and option cards'](./Assets/Images/Card.png)
 
 Unfortunately there are some errors I could not figure out in time and it is missing some features that I could not add in time. Will work on this in the future when I have free time. 
 
 URL to the deployed site: 
-[Quiz Game URL]
+[Quiz Game URL](https://gera1313.github.io/4-Code-Quiz/)
 
 
 ## Credits
@@ -58,7 +59,7 @@ Thank you to the BCS Learning Assitants for guiding me and helping me on the rig
 Thank you to various YouTube tutorials (will add them later once I find them again)
 
 Also: 
-![How to make a simple JavaScript quiz](https://simplestepscode.com/javascript-quiz-tutorial/)
+[How to make a simple JavaScript quiz](https://simplestepscode.com/javascript-quiz-tutorial/)
 
 ## License
 N/A
