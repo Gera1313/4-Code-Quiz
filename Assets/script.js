@@ -156,7 +156,7 @@ const timerDisplay = () => {
     countdown = setInterval(() => {
         count--;
         // timer may not work
-        timeLeft.innerHTML= "${count}s";
+        timeLeft.innerHTML= `${count}s`;
         if (count == 0) {
             clearInterval(countdown);
             displayNext();
@@ -188,7 +188,8 @@ function quizCreater() {
         question_DIV.innerHTML = i.question; 
         div.appendChild(question_DIV);
 
-        div.innerHTML += div.innerHTML += '<button class="option-div" onclick="checker(this)"> ${i.options[0]}</button><button class="option-div" onclick="checker(this)"> ${i.options[1]}</button><button class="option-div" onclick="checker(this)"> ${i.options[2]}</button><button class="option-div" onclick="checker(this)"> ${i.options[3]}</button>';
+// Keep having issues here and can't figure out.
+        div.innerHTML += '<button class="option-div" onclick="checker(this)"> ${i.options[0]}</button><button class="option-div" onclick="checker(this)"> ${i.options[1]}</button><button class="option-div" onclick="checker(this)"> ${i.options[2]}</button><button class="option-div" onclick="checker(this)"> ${i.options[3]}</button>';
         quizContainer.appendChild(div);
     }
 }
@@ -216,7 +217,6 @@ function checker(userOption){
     options.forEach((element) => {
         element.disabled = true;
     });
-
 }
 
 function initial(){
