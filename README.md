@@ -45,7 +45,7 @@ You click on 'Start Quiz
 The question and option cards
 ![The question and option cards'](./Assets/Images/Card.png)
 
-Unfortunately there are some errors I could not figure out in time and it is missing some features that I could not add in time. 
+Unfortunately there are some errors I could not figure out in time and it is missing some features that I could not add in time. Will work on this in the future when I have free time. 
 
 URL to the deployed site: 
 [Quiz Game URL]
