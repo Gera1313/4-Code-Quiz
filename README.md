@@ -39,6 +39,7 @@ N/A
 The following image demonstrates the application functionality:
 
 You click on 'Start Quiz
+
 ![You click on 'Start Quiz'](./Assets/Images/Home.png)
 
 The question and option cards
