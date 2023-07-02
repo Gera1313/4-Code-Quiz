@@ -181,7 +181,7 @@ function quizCreater() {
         let div = document.createElement("div");
         div.classList.add("container-mid", "hide");
 
-        countOfQuestion.innerHTML = 1 + " of " + quizArray.length + " Question ";
+        countOfQuestion.innerHTML = 1 + " of " + quizArray.length + " Questions ";
 
         let question_DIV = document.createElement("p");
         question_DIV.classList.add("question");
@@ -189,7 +189,7 @@ function quizCreater() {
         div.appendChild(question_DIV);
 
 // Keep having issues here and can't figure out.
-        div.innerHTML += '<button class="option-div" onclick="checker(this)"> ${i.options[0]}</button><button class="option-div" onclick="checker(this)"> ${i.options[1]}</button><button class="option-div" onclick="checker(this)"> ${i.options[2]}</button><button class="option-div" onclick="checker(this)"> ${i.options[3]}</button>';
+        div.innerHTML += '<button class="option-div" onclick="checker(this)"> ${i.options[0]}</button><button class="option-div" onclick="checker(this)"> ${i.options[1]}</button><button class="option-div" onclick="checker(this)"> ${i.options[2]}</button><button class="option-div" onclick="checker(this)"> ${i.options[3]}</button>'
         quizContainer.appendChild(div);
     }
 }

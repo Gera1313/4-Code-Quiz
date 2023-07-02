@@ -29,16 +29,35 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
 ```
+## Installation
 
-## Mock-Up
+N/A
+
+
+## Usage
 
 The following image demonstrates the application functionality:
 
 You click on 'Start Quiz
 ![You click on 'Start Quiz'](./Assets/Images/Home.png)
 
-You click on 'Start Quiz
-![You click on 'Start Quiz'](./Assets/Images/Home.png)
+The question and option cards
+![The question and option cards'](./Assets/Images/Card.png)
 
-You click on 'Start Quiz
-![You click on 'Start Quiz'](./Assets/Images/Home.png)
+Unfortunately there are some errors I could not figure out in time and it is missing some features that I could not add in time. 
+
+URL to the deployed site: 
+[Quiz Game URL]
+
+
+## Credits
+
+Thank you to the BCS Learning Assitants for guiding me and helping me on the right path. 
+
+Thank you to various YouTube tutorials (will add them later once I find them again)
+
+Also: 
+![How to make a simple JavaScript quiz](https://simplestepscode.com/javascript-quiz-tutorial/)
+
+## License
+N/A
