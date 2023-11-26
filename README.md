@@ -52,6 +52,8 @@ Unfortunately there are some errors I could not figure out in time and it is mis
 
 11/25/23 UPDATE: Working on refactoring and fixing this web application now. 
 
+## Links
+
 URL to the deployed site: 
 [Quiz Game URL](https://gera1313.github.io/4-Code-Quiz/)
 
