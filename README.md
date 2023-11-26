@@ -66,4 +66,5 @@ Also:
 [How to make a simple JavaScript quiz](https://simplestepscode.com/javascript-quiz-tutorial/)
 
 ## License
-N/A
+
+## [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
