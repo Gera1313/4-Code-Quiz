@@ -155,7 +155,6 @@ nextBtn.addEventListener("click", (displayNext = () => {
 const timerDisplay = () => {
     countdown = setInterval(() => {
         count--;
-        // timer may not work
         timeLeft.innerHTML= `${count}s`;
         if (count == 0) {
             clearInterval(countdown);
@@ -188,7 +187,6 @@ function quizCreater() {
         question_DIV.innerHTML = i.question; 
         div.appendChild(question_DIV);
 
-// Keep having issues here and can't figure out.
         div.innerHTML += `<button class="option-div" onclick="checker(this)"> ${i.options[0]}</button><br><button class="option-div" onclick="checker(this)"> ${i.options[1]}</button><br><button class="option-div" onclick="checker(this)"> ${i.options[2]}</button><br><button class="option-div" onclick="checker(this)"> ${i.options[3]}</button>`
         quizContainer.appendChild(div);
     }
