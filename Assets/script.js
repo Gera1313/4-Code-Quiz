@@ -189,7 +189,7 @@ function quizCreater() {
         div.appendChild(question_DIV);
 
 // Keep having issues here and can't figure out.
-        div.innerHTML += '<button class="option-div" onclick="checker(this)"> ${i.options[0]}</button><button class="option-div" onclick="checker(this)"> ${i.options[1]}</button><button class="option-div" onclick="checker(this)"> ${i.options[2]}</button><button class="option-div" onclick="checker(this)"> ${i.options[3]}</button>'
+        div.innerHTML += `<button class="option-div" onclick="checker(this)"> ${i.options[0]}</button><button class="option-div" onclick="checker(this)"> ${i.options[1]}</button><button class="option-div" onclick="checker(this)"> ${i.options[2]}</button><button class="option-div" onclick="checker(this)"> ${i.options[3]}</button>`
         quizContainer.appendChild(div);
     }
 }
