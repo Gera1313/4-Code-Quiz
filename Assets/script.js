@@ -143,7 +143,7 @@ nextBtn.addEventListener("click", (displayNext = () => {
         scoreCount + " out of " + questionCount;
     }
     else {
-        countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + " Question";
+        countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + " Questions";
 
         quizDisplay(questionCount);
         count = 11;
@@ -172,7 +172,7 @@ const quizDisplay = (questionCount) => {
     quizCards[questionCount].classList.remove("hide");
 };
 
-function quizCreater() {
+function quizCreator() {
     quizArray.sort(() => Math.random() - 0.5);
 
     for (let i of quizArray) {
@@ -193,7 +193,7 @@ function quizCreater() {
 }
 
 function checker(userOption){
-    let userSolution =userOption.innerText;
+    let userSolution = userOption.innerText;
     let question = document.getElementsByClassName("container-mid")[questionCount];
     let options = question.querySelectorAll(".option-div");
 
@@ -224,7 +224,7 @@ function initial(){
     count = 11;
     clearInterval(countdown);
     timerDisplay();
-    quizCreater();
+    quizCreator();
     quizDisplay(questionCount);
 }
 
