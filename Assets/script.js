@@ -23,7 +23,7 @@ const quizArray = [
             "DF",
             "Mexico City",
             "Mexico",
-            "All of the above",
+            "All of them",
         ],
         correct: "All of the above",
     },
@@ -143,7 +143,7 @@ nextBtn.addEventListener("click", (displayNext = () => {
         scoreCount + " out of " + questionCount;
     }
     else {
-        countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + "Question";
+        countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + " Question";
 
         quizDisplay(questionCount);
         count = 11;
@@ -189,7 +189,7 @@ function quizCreater() {
         div.appendChild(question_DIV);
 
 // Keep having issues here and can't figure out.
-        div.innerHTML += `<button class="option-div" onclick="checker(this)"> ${i.options[0]}</button><button class="option-div" onclick="checker(this)"> ${i.options[1]}</button><button class="option-div" onclick="checker(this)"> ${i.options[2]}</button><button class="option-div" onclick="checker(this)"> ${i.options[3]}</button>`
+        div.innerHTML += `<button class="option-div" onclick="checker(this)"> ${i.options[0]}</button><br><button class="option-div" onclick="checker(this)"> ${i.options[1]}</button><br><button class="option-div" onclick="checker(this)"> ${i.options[2]}</button><br><button class="option-div" onclick="checker(this)"> ${i.options[3]}</button>`
         quizContainer.appendChild(div);
     }
 }
