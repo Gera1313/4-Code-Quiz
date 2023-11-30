@@ -128,3 +128,20 @@ button {
 .score-page {
     text-align: center;
 }
+
+#final-score {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+#initials-input {
+    width: 3em;
+    text-transform: uppercase;
+    margin-right: 0.5em;
+}
+
+#save-score,
+#view-scores {
+    margin-top: 1em;
+}
