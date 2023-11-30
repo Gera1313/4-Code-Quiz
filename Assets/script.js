@@ -240,6 +240,8 @@ window.onload = () => {
     displayContainer.classList.add("hide");
 };
 
+// Handles saving the score to local storage when the user clicks the Save Score button
+
 saveScoreBtn.addEventListener("click", () => {
     saveScore();
 });
@@ -255,10 +257,27 @@ function saveScore() {
         return;
     }
 
+    // Creates object to store score and initials
+    let scoreData = {
+        score: scoreCount,
+        initials: initials,
+    };
 
+    // Retrieve scores from local storage
+    let existingScores = JSON.parse(localStorage.getItem("scores")) || [];
 
+    //  Add new score to the array
+    existingScores.push(scoreData);
 
+    // Save the updated scores back to local storage
+    localStorage.setItem("scores", JSON.stringify(existingScores));
 
-    
+    // Hides quiz container and shows score page
+    displayContainer.classList.add("hide");
+    scoreContainer.classList.add("hide");
+    document.querySelector(".score-page").classList.remove("hide");
+
+    // Displays the final score
+    finalScoreDisplay.innerText = scoreCount;
 }
 
