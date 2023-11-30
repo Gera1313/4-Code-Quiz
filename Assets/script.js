@@ -10,7 +10,7 @@ let startScreen = document.querySelector(".start-screen");
 let startButton = document.getElementById("start-button");
 let questionCount;
 let scoreCount = 0;
-let count = 16
+// let count = 16
 let countdown; 
 
 // 10 questions array
@@ -25,7 +25,7 @@ const quizArray = [
             "Mexico",
             "All of them",
         ],
-        correct: "All of the above",
+        correct: "All of them",
     },
     {
         id: "1",
@@ -134,29 +134,33 @@ restart.addEventListener("click", () => {
     scoreContainer.classList.add("hide");
 });
 
-nextBtn.addEventListener("click", (displayNext = () => {
+nextBtn.addEventListener("click", () => {
     questionCount += 1;
 
-    if(questionCount == quizArray.length) {
-        displayContainer.classList.add("hide");
-        userScore.innerHTML = "Your Score is " +
-        scoreCount + " out of " + questionCount;
-    }
-    else {
-        countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + " Questions";
-
-        quizDisplay(questionCount);
+    if(questionCount < quizArray.length) {
         count = 11;
         clearInterval(countdown);
         timerDisplay();
+        // displayContainer.classList.add("hide");
+        // userScore.innerHTML = "Your Score is " +
+        // scoreCount + " out of " + questionCount;
     }
-}));
+});
+//     else {
+//         countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + " Questions";
+
+//         quizDisplay(questionCount);
+//         count = 11;
+//         clearInterval(countdown);
+//         timerDisplay();
+//     }
+// }));
 
 const timerDisplay = () => {
     countdown = setInterval(() => {
         count--;
         timeLeft.innerHTML= `${count}s`;
-        if (count == 0) {
+        if (count === 0) {
             clearInterval(countdown);
             displayNext();
         }
