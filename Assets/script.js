@@ -10,7 +10,6 @@ let startScreen = document.querySelector(".start-screen");
 let startButton = document.getElementById("start-button");
 let questionCount;
 let scoreCount = 0;
-// let count = 16
 let countdown; 
 
 // 10 questions array
@@ -137,24 +136,19 @@ restart.addEventListener("click", () => {
 nextBtn.addEventListener("click", () => {
     questionCount += 1;
 
-    if(questionCount < quizArray.length) {
+    if (questionCount === quizArray.length) {
+        displayContainer.classList.add("hide");
+        userScore.innerHTML = "Your Score is " +
+        scoreCount + " out of " + questionCount;
+    } else {
+        countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + " Question";
+        quizDisplay(questionCount);
+
         count = 11;
         clearInterval(countdown);
         timerDisplay();
-        // displayContainer.classList.add("hide");
-        // userScore.innerHTML = "Your Score is " +
-        // scoreCount + " out of " + questionCount;
     }
 });
-//     else {
-//         countOfQuestion.innerHTML = questionCount + 1 + " of " + quizArray.length + " Questions";
-
-//         quizDisplay(questionCount);
-//         count = 11;
-//         clearInterval(countdown);
-//         timerDisplay();
-//     }
-// }));
 
 const timerDisplay = () => {
     countdown = setInterval(() => {
@@ -198,8 +192,6 @@ function quizCreator() {
 
 function checker(userOption){
     let userSolution = userOption.innerText;
-    // let question = document.getElementsByClassName("container-mid")[questionCount];
-    // let options = question.querySelectorAll(".option-div");
 
     if(userSolution === quizArray[questionCount].correct){
         userOption.classList.add("correct");
