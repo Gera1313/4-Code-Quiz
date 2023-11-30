@@ -246,10 +246,6 @@ saveScoreBtn.addEventListener("click", () => {
     saveScore();
 });
 
-viewScoresBtn.addEventListener("click", () => {
-    // Implement logic
-});
-
 function saveScore() {
     let initials = document.getElementById("initials-input").value.toUpperCase();
     if (initials.trim() === "") {
@@ -280,4 +276,6 @@ function saveScore() {
     // Displays the final score
     finalScoreDisplay.innerText = scoreCount;
 }
+
+// Handles displaying the score when the user clicks the View Score button
 
