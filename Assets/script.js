@@ -12,6 +12,10 @@ let questionCount;
 let scoreCount = 0;
 let countdown; 
 
+let saveScoreBtn = document.getElementById("save-score");
+let viewScoresBtn = document.getElementById("view-scores");
+let finalScoreDisplay = document.getElementById("final-score");
+
 // 10 questions array
 
 const quizArray = [
