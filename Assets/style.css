@@ -123,3 +123,8 @@ button {
     font-size: 1.5em;
     color: #fff;
 }
+
+/* Scoreboard style */
+.score-page {
+    text-align: center;
+}
