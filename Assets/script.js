@@ -198,14 +198,15 @@ function quizCreator() {
 
 function checker(userOption){
     let userSolution = userOption.innerText;
-    let question = document.getElementsByClassName("container-mid")[questionCount];
-    let options = question.querySelectorAll(".option-div");
+    // let question = document.getElementsByClassName("container-mid")[questionCount];
+    // let options = question.querySelectorAll(".option-div");
 
     if(userSolution === quizArray[questionCount].correct){
         userOption.classList.add("correct");
         scoreCount++;
     }
     else {
+        count -= 3; // deducts 4 seconds if wrong answer
         userOption.classList.add("incorrect");
 
         options.forEach((element) => {
@@ -221,7 +222,7 @@ function checker(userOption){
     });
 }
 
-function initial(){
+function initial() {
     quizContainer.innerHTML = "";
     questionCount = 0;
     scoreCount = 0;
