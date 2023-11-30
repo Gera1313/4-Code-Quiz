@@ -240,3 +240,25 @@ window.onload = () => {
     displayContainer.classList.add("hide");
 };
 
+saveScoreBtn.addEventListener("click", () => {
+    saveScore();
+});
+
+viewScoresBtn.addEventListener("click", () => {
+    // Implement logic
+});
+
+function saveScore() {
+    let initials = document.getElementById("initials-input").value.toUpperCase();
+    if (initials.trim() === "") {
+        alert("Please enter your initials.");
+        return;
+    }
+
+
+
+
+
+    
+}
+
