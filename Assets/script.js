@@ -202,7 +202,7 @@ function checker(userOption){
         scoreCount++;
     }
     else {
-        count -= 3; // deducts 4 seconds if wrong answer
+        count -= 3; // deducts seconds if wrong answer
         userOption.classList.add("incorrect");
 
         options.forEach((element) => {
