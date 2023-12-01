@@ -44,7 +44,7 @@ const quizArray = [
     correct: "Doha",
   },
   {
-    id: "4",  
+    id: "4",
     question: "What is the capital of Vietnam?",
     options: ["Saigon", "Hanoi", "Ho-Chi-Minh City", "Da Nang"],
     correct: "Hanoi",
@@ -98,8 +98,8 @@ nextBtn.addEventListener("click", () => {
     displayContainer.classList.add("hide");
     userScore.innerHTML =
       "Your Score is " + scoreCount + " out of " + questionCount;
-      finalScoreDisplay.innerText = scoreCount;
-      document.querySelector(".score-page").classList.remove("hide");
+    finalScoreDisplay.innerText = scoreCount;
+    document.querySelector(".score-page").classList.remove("hide");
   } else {
     countOfQuestion.innerHTML =
       questionCount + 1 + " of " + quizArray.length + " Question";
