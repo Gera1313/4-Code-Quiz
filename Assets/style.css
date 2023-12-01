@@ -145,6 +145,13 @@ button {
 #save-score,
 #view-scores {
     margin-top: 1em;
+    padding: 0.5em 1.5em;
+    font-size: 1em;
+    background-color: #664147;
+    color: #fff;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
 }
 
 /* Let's add style to the overlay/modal and close button */
@@ -164,7 +171,7 @@ button {
     padding: 20px;
     width: 60%;
     max-width: 600px;
-    margin: 10% auto;
+    margin: 12% auto;
     position: relative;
     box-shadow: 0 4px 8px;
 }
