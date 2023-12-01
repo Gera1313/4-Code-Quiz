@@ -100,6 +100,8 @@ nextBtn.addEventListener("click", () => {
       "Your Score is " + scoreCount + " out of " + questionCount;
     finalScoreDisplay.innerText = scoreCount;
     document.querySelector(".score-page").classList.remove("hide");
+// shows the play again button at the end
+    playAgainBtn.classList.remove("hide");
   } else {
     countOfQuestion.innerHTML =
       questionCount + 1 + " of " + quizArray.length + " Question";
@@ -263,6 +265,7 @@ function displayScores() {
   });
 }
 
+// Play again button at the end of the game
 let playAgainBtn = document.getElementById("play-again");
 
 playAgainBtn.addEventListener("click", () => {
