@@ -94,11 +94,12 @@ restart.addEventListener("click", () => {
 nextBtn.addEventListener("click", () => {
   questionCount += 1;
 
-  if (questionCount === quizArray.length) {
+  if (questionCount === quizArray.length || count === 0) {
     displayContainer.classList.add("hide");
     userScore.innerHTML =
       "Your Score is " + scoreCount + " out of " + questionCount;
       finalScoreDisplay.innerText = scoreCount;
+      document.querySelector(".score-page").classList.remove("hide");
   } else {
     countOfQuestion.innerHTML =
       questionCount + 1 + " of " + quizArray.length + " Question";
