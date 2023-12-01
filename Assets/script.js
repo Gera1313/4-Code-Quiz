@@ -269,7 +269,7 @@ function displayScores() {
 let playAgainBtn = document.getElementById("play-again");
 
 playAgainBtn.addEventListener("click", () => {
-    playAgainBtn();
+    playAgain();
 });
 
 function playAgain() {
