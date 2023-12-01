@@ -22,8 +22,7 @@
           <span class="time-left">10s</span>
         </div>
       </div>
-      <div id="container">
-      </div>
+      <div id="container"></div>
       <button id="next-button">Next</button>
     </div>
     <div class="score-container hide">
@@ -31,23 +30,23 @@
       <button id="restart">Restart</button>
     </div>
 
-    <div class="score-page"> 
-        <!-- make sure to add hide next to score-page -->
-        <h2>Your Score</h2>
-        <p id="final-score">0</p>
-        <label for="initials">Enter Your Initials:</label>
-        <input type="text" placeholder="here" id="initials-input" maxlength="3" />
-        <button id="save-score">Save Score</button>
-        <button id="view-scores">View Scores</button>
+    <div class="score-page hide">
+      <!-- make sure to add hide next to score-page -->
+      <h2>Your Score</h2>
+      <p id="final-score">0</p>
+      <label for="initials">Enter Your Initials:</label>
+      <input type="text" placeholder="here" id="initials-input" maxlength="3" />
+      <button id="save-score">Save Score</button>
+      <button id="view-scores">View Scores</button>
     </div>
 
-    <div id="scores-overlay" class="overlay">
-        <!-- Make sure to add hide next to overlay -->
-        <div class="modal">
-            <span id="close-scores" class="close">&times;</span>
-            <h2>High Scores</h2>
-            <ul id="score-list"></ul>
-        </div>
+    <div id="scores-overlay" class="overlay hide">
+      <!-- Make sure to add hide next to overlay -->
+      <div class="modal">
+        <span id="close-scores" class="close">&times;</span>
+        <h2>High Scores</h2>
+        <ul id="score-list"></ul>
+      </div>
     </div>
 
     <script src="./Assets/script.js"></script>

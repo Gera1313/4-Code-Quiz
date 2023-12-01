@@ -85,6 +85,10 @@ restart.addEventListener("click", () => {
   initial();
   displayContainer.classList.remove("hide");
   scoreContainer.classList.add("hide");
+  document.querySelector(".score-page").classList.add("hide");
+
+  //   hides the overlay when restarting
+  document.getElementById("scores-overlay").classList.add("hide");
 });
 
 nextBtn.addEventListener("click", () => {
@@ -239,4 +243,17 @@ document.getElementById("close-scores").addEventListener("click", () => {
 function displayScores() {
   // retrieve scores from local storage
   let scores = JSON.parse(localStorage.getItem("scores")) || [];
+
+  //   sorts scores in descending order
+  scores.sort((a, b) => b.score - a.score);
+
+  // displays the scores in the modal
+  let scoreList = document.getElementById("score-list");
+  scoreList.innerHTML = "";
+
+  scores.forEach((scoreData) => {
+    let listItem = document.createElement("li");
+    listItem.textContent = `${scoreData.initials}: ${scoreData.score}`;
+    scoreList.appendChild(listItem);
+  });
 }
