@@ -44,7 +44,7 @@ const quizArray = [
     correct: "Doha",
   },
   {
-    id: "4",
+    id: "4",  
     question: "What is the capital of Vietnam?",
     options: ["Saigon", "Hanoi", "Ho-Chi-Minh City", "Da Nang"],
     correct: "Hanoi",
@@ -98,6 +98,7 @@ nextBtn.addEventListener("click", () => {
     displayContainer.classList.add("hide");
     userScore.innerHTML =
       "Your Score is " + scoreCount + " out of " + questionCount;
+      finalScoreDisplay.innerText = scoreCount;
   } else {
     countOfQuestion.innerHTML =
       questionCount + 1 + " of " + quizArray.length + " Question";
@@ -151,6 +152,7 @@ function quizCreator() {
 
 function checker(userOption) {
   let userSolution = userOption.innerText;
+  let options = userOption.parentElement.querySelectorAll(".option-div");
 
   if (userSolution === quizArray[questionCount].correct) {
     userOption.classList.add("correct");
@@ -160,7 +162,7 @@ function checker(userOption) {
     userOption.classList.add("incorrect");
 
     options.forEach((element) => {
-      if ((element.innerText = quizArray[questionCount].correct)) {
+      if (element.innerText === quizArray[questionCount].correct) {
         element.classList.add("correct");
       }
     });
@@ -231,7 +233,7 @@ function saveScore() {
 }
 
 // Handles displaying the score when the user clicks the View Score button
-viewScoresBtn.addEventListener("clicks", () => {
+viewScoresBtn.addEventListener("click", () => {
   document.getElementById("scores-overlay").classList.remove("hide");
   displayScores();
 });
@@ -246,6 +248,8 @@ function displayScores() {
 
   //   sorts scores in descending order
   scores.sort((a, b) => b.score - a.score);
+
+  console.log("Scores:", scores);
 
   // displays the scores in the modal
   let scoreList = document.getElementById("score-list");
