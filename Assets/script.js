@@ -262,3 +262,18 @@ function displayScores() {
     scoreList.appendChild(listItem);
   });
 }
+
+let playAgainBtn = document.getElementById("play-again");
+
+playAgainBtn.addEventListener("click", () => {
+    playAgainBtn();
+});
+
+function playAgain() {
+    displayContainer.classList.remove("hide");
+    scoreContainer.classList.add("hide");
+    document.querySelector(".score-page").classList.add("hide");
+    document.getElementById("scores-overlay").classList.add("hide");
+    playAgainBtn.classList.add("hide");
+    initial();
+}
