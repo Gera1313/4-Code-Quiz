@@ -184,7 +184,21 @@ button {
   cursor: pointer;
 }
 
-/* Play Again button */
 #play-again {
-
+    display: none; /* Initially hide the button */
+    position: absolute;
+    bottom: 20px; /* Adjust this value based on your preference */
+    right: 20px; /* Adjust this value based on your preference */
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
+
+#play-again:hover {
+    background-color: #45a049;
+}
+
