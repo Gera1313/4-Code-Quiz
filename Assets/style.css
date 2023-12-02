@@ -185,10 +185,9 @@ button {
 }
 
 #play-again {
-    display: none; /* Initially hide the button */
     position: absolute;
-    bottom: 20px; /* Adjust this value based on your preference */
-    right: 20px; /* Adjust this value based on your preference */
+    bottom: 20px;
+    right: 20px;
     background-color: #4caf50;
     color: white;
     padding: 10px 20px;

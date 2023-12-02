@@ -268,15 +268,14 @@ function displayScores() {
 // Play again button at the end of the game
 let playAgainBtn = document.getElementById("play-again");
 
-playAgainBtn.addEventListener("click", () => {
-    playAgain();
-});
+playAgainBtn.addEventListener("click", playAgain);
 
 function playAgain() {
+    console.log("Play again button clicked!");
     displayContainer.classList.remove("hide");
     scoreContainer.classList.add("hide");
     document.querySelector(".score-page").classList.add("hide");
     document.getElementById("scores-overlay").classList.add("hide");
-    playAgainBtn.classList.add("hide");
+    playAgainBtn.style.display = "none";
     initial();
 }
