@@ -101,7 +101,7 @@ nextBtn.addEventListener("click", () => {
     finalScoreDisplay.innerText = scoreCount;
     document.querySelector(".score-page").classList.remove("hide");
 // shows the play again button at the end
-    playAgainBtn.classList.remove("hide");
+    playAgainBtn.style.display = "block";
   } else {
     countOfQuestion.innerHTML =
       questionCount + 1 + " of " + quizArray.length + " Question";
@@ -110,6 +110,8 @@ nextBtn.addEventListener("click", () => {
     count = 11;
     clearInterval(countdown);
     timerDisplay();
+// hiddes the play again buton during the game
+    playAgainBtn.style.display = "none";
   }
 });
 
@@ -271,11 +273,10 @@ let playAgainBtn = document.getElementById("play-again");
 playAgainBtn.addEventListener("click", playAgain);
 
 function playAgain() {
-    console.log("Play again button clicked!");
     displayContainer.classList.remove("hide");
     scoreContainer.classList.add("hide");
     document.querySelector(".score-page").classList.add("hide");
     document.getElementById("scores-overlay").classList.add("hide");
-    playAgainBtn.classList.remove("hide");
+    playAgainBtn.style.display = "none";
     initial();
 }
