@@ -276,6 +276,6 @@ function playAgain() {
     scoreContainer.classList.add("hide");
     document.querySelector(".score-page").classList.add("hide");
     document.getElementById("scores-overlay").classList.add("hide");
-    playAgainBtn.style.display = "none";
+    playAgainBtn.classList.remove("hide");
     initial();
 }
