@@ -188,7 +188,9 @@ button {
     display: none;
     position: absolute;
     bottom: 20px;
-    right: 20px;
+    /* right: 20px; */
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #4caf50;
     color: white;
     padding: 10px 20px;
