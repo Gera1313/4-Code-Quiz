@@ -143,7 +143,6 @@ button {
   margin-right: 0.5em;
 }
 
-/* Come back and finish this one */
 #save-score,
 #view-scores {
   margin-top: 1em;
@@ -184,6 +183,8 @@ button {
   cursor: pointer;
 }
 
+
+/* Play Again button */
 #play-again {
     display: none;
     position: absolute;
