@@ -16,6 +16,8 @@ let saveScoreBtn = document.getElementById("save-score");
 let viewScoresBtn = document.getElementById("view-scores");
 let finalScoreDisplay = document.getElementById("final-score");
 
+let count = 11;
+
 // 10 questions array
 
 const quizArray = [
@@ -172,7 +174,7 @@ function checker(userOption) {
       }
     });
   }
-  clearInterval(countdown);
+  
   options.forEach((element) => {
     element.disabled = true;
   });
