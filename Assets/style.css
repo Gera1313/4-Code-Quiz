@@ -187,10 +187,10 @@ button {
 #play-again {
     display: none;
     position: absolute;
-    bottom: 20px;
-    /* right: 20px; */
+    bottom: 400px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
     background-color: #4caf50;
     color: white;
     padding: 10px 20px;
