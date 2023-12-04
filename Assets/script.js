@@ -183,6 +183,15 @@ function checker(userOption) {
     }
 
     clearInterval(countdown); 
+
+    // checks if timer has reached 0 before revealing correct answer
+    if (count <= 0) {
+        options.forEach((element) => {
+            if (element.innerText === quizArray[questionCount].correct) {
+                element.classList.add("correct");
+            }
+        });
+    }
 }
 
 function initial() {
