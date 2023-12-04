@@ -44,7 +44,7 @@ You click on 'Start Quiz
 
 The question and option cards
 
-![The question and option cards](./Assets/Images/card.png)
+![The question and option cards](./Assets/Images/Card.png)
 
 Scoreboards
 
