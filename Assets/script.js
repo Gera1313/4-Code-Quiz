@@ -165,6 +165,14 @@ function checker(userOption) {
     options.forEach((element) => {
         element.disabled = true;
     });
+
+    if (userSolution === quizArray[questionCount].correct) {
+        userOption.classList.add("correct");
+        scoreCount++;
+    } else {
+        count -= 3; // deducts seconds if wrong answer
+        userOption.classList.add("incorrect");
+    }
 }
 
 function initial() {
