@@ -102,7 +102,7 @@ nextBtn.addEventListener("click", () => {
       "Your Score is " + scoreCount + " out of " + questionCount;
     finalScoreDisplay.innerText = scoreCount;
     document.querySelector(".score-page").classList.remove("hide");
-// shows the play again button at the end
+    // shows the play again button at the end
     playAgainBtn.style.display = "block";
   } else {
     countOfQuestion.innerHTML =
@@ -112,7 +112,7 @@ nextBtn.addEventListener("click", () => {
     count = 11;
     clearInterval(countdown);
     timerDisplay();
-// hiddes the play again buton during the game
+    // hiddes the play again buton during the game
     playAgainBtn.style.display = "none";
   }
 });
@@ -165,20 +165,44 @@ function checker(userOption) {
     userOption.classList.add("correct");
     scoreCount++;
   } else {
-    count -= 3; // deducts seconds if wrong answer
+    count -= 3; // Deducts seconds if wrong answer
     userOption.classList.add("incorrect");
 
+    // Allow for a second choice even if the first choice was wrong
+    options.forEach((element) => {
+      element.disabled = true;
+    });
+
+    // Remove the "disabled" attribute after a short delay to allow for a second choice
+    setTimeout(() => {
+      options.forEach((element) => {
+        element.disabled = false;
+      });
+    }, 1000);
+  }
+  clearInterval(countdown);
+
+  // Check if the timer has reached 0 before revealing the correct answer
+  if (count <= 0) {
     options.forEach((element) => {
       if (element.innerText === quizArray[questionCount].correct) {
         element.classList.add("correct");
       }
     });
   }
-  
-  options.forEach((element) => {
-    element.disabled = true;
-  });
 }
+
+//     options.forEach((element) => {
+//       if (element.innerText === quizArray[questionCount].correct) {
+//         element.classList.add("correct");
+//       }
+//     });
+//   }
+
+//   options.forEach((element) => {
+//     element.disabled = true;
+//   });
+// }
 
 function initial() {
   quizContainer.innerHTML = "";
@@ -186,6 +210,7 @@ function initial() {
   scoreCount = 0;
   count = 11;
   clearInterval(countdown);
+
   timerDisplay();
   quizCreator();
   quizDisplay(questionCount);
@@ -275,10 +300,10 @@ let playAgainBtn = document.getElementById("play-again");
 playAgainBtn.addEventListener("click", playAgain);
 
 function playAgain() {
-    displayContainer.classList.remove("hide");
-    scoreContainer.classList.add("hide");
-    document.querySelector(".score-page").classList.add("hide");
-    document.getElementById("scores-overlay").classList.add("hide");
-    playAgainBtn.style.display = "none";
-    initial();
+  displayContainer.classList.remove("hide");
+  scoreContainer.classList.add("hide");
+  document.querySelector(".score-page").classList.add("hide");
+  document.getElementById("scores-overlay").classList.add("hide");
+  playAgainBtn.style.display = "none";
+  initial();
 }
