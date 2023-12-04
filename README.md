@@ -49,11 +49,17 @@ The question and option cards
 ## Notes 
 
 11/25/23 UPDATE: Working on refactoring and fixing this web application. 
+
 12/4/23 UPDATE: All issues have been fixed and implemented new features. 
+
 New features: 
+
 Scoreboard
+
 Ability to enter and save initials and score
+
 "View Scores" modal
+
 "Play Again" button
 
 ## Links
