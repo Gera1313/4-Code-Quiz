@@ -158,7 +158,13 @@ function quizCreator() {
 }
 
 function checker(userOption) {
-    
+    let userSolution = userOption.innerText;
+    let options = userOption.parentElement.querySelectorAll(".option-div");
+
+    // disable options to prevent multiple choices
+    options.forEach((element) => {
+        element.disabled = true;
+    });
 }
 
 function initial() {
