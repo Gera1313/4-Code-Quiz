@@ -2,22 +2,22 @@
 
 ## The Task
 
-At some point in my journey to become a full-stack web developer, I will likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical assessment includes both multiple-choice questions and interactive coding challenges. I have created my own assessment based on this. 
+At some point in my journey to become a full-stack web developer, I will likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical assessment includes both multiple-choice questions and questions. I have created my own assessment based on this. 
 
 This app will run in the browser and features dynamically updated HTML and CSS powered by JavaScript code that I have written.
 
 ## User Story
 
 ```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
+AS A high school student
+I WANT to take a timed quiz on country capitals that stores high scores
 SO THAT I can gauge my progress compared to my peers
 ```
 
 ## Acceptance Criteria
 
 ```
-GIVEN I am taking a code quiz
+GIVEN I am taking a country quiz
 WHEN I click the start button
 THEN a timer starts and I am presented with a question
 WHEN I answer a question
