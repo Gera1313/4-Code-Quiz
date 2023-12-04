@@ -158,40 +158,40 @@ function quizCreator() {
 }
 
 function checker(userOption) {
-    let userSolution = userOption.innerText;
-    let options = userOption.parentElement.querySelectorAll(".option-div");
+  let userSolution = userOption.innerText;
+  let options = userOption.parentElement.querySelectorAll(".option-div");
 
-    // disable options to prevent multiple choices
+  // disable options to prevent multiple choices
+  options.forEach((element) => {
+    element.disabled = true;
+  });
+
+  if (userSolution === quizArray[questionCount].correct) {
+    userOption.classList.add("correct");
+    scoreCount++;
+  } else {
+    count -= 3; // deducts seconds if wrong answer
+    userOption.classList.add("incorrect");
+
+    // Allow for a second choice even if the first choice was wrong
+    setTimeout(() => {
+      options.forEach((element) => {
+        element.disabled = false;
+      });
+      timerDisplay(); // Resumes the countdown after allowing a second choice
+    }, 1000);
+  }
+
+  clearInterval(countdown);
+
+  // checks if timer has reached 0 before revealing correct answer
+  if (count <= 0) {
     options.forEach((element) => {
-        element.disabled = true;
+      if (element.innerText === quizArray[questionCount].correct) {
+        element.classList.add("correct");
+      }
     });
-
-    if (userSolution === quizArray[questionCount].correct) {
-        userOption.classList.add("correct");
-        scoreCount++;
-    } else {
-        count -= 3; // deducts seconds if wrong answer
-        userOption.classList.add("incorrect");
-
-        // Allow for a second choice even if the first choice was wrong
-        setTimeout(() => {
-            options.forEach((element) => {
-                element.disabled = false;
-            });
-            timerDisplay(); // Resumes the countdown after allowing a second choice
-        }, 1000);
-    }
-
-    clearInterval(countdown); 
-
-    // checks if timer has reached 0 before revealing correct answer
-    if (count <= 0) {
-        options.forEach((element) => {
-            if (element.innerText === quizArray[questionCount].correct) {
-                element.classList.add("correct");
-            }
-        });
-    }
+  }
 }
 
 function initial() {
