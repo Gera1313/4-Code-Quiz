@@ -1,8 +1,8 @@
-# Web APIs: Code Quiz
+# Country Capitals Code Quiz
 
 ## The Task
 
-At some point in my journey to become a full-stack web developer, I will likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. I have created my own coding assessment based on this. 
+At some point in my journey to become a full-stack web developer, I will likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical assessment includes both multiple-choice questions and interactive coding challenges. I have created my own assessment based on this. 
 
 This app will run in the browser and features dynamically updated HTML and CSS powered by JavaScript code that I have written.
 
@@ -44,7 +44,11 @@ You click on 'Start Quiz
 
 The question and option cards
 
-![The question and option cards']()
+![The question and option cards'](./Assets/Images/card.png)
+
+Scoreboards
+
+![Scores Section](./Assets/Images/Score.png)
 
 ## Notes 
 
