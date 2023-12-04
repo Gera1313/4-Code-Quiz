@@ -46,11 +46,15 @@ The question and option cards
 
 ![The question and option cards']()
 
-## Notes
+## Notes 
 
-Unfortunately there are some errors I could not figure out in time and it is missing some features that I could not add in time. Will work on this in the future when I have free time. 
-
-11/25/23 UPDATE: Working on refactoring and fixing this web application now. 
+11/25/23 UPDATE: Working on refactoring and fixing this web application. 
+12/4/23 UPDATE: All issues have been fixed and implemented new features. 
+New features: 
+Scoreboard
+Ability to enter and save initials and score
+"View Scores" modal
+"Play Again" button
 
 ## Links
 
