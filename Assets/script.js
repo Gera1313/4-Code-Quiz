@@ -172,7 +172,17 @@ function checker(userOption) {
     } else {
         count -= 3; // deducts seconds if wrong answer
         userOption.classList.add("incorrect");
+
+        // Allow for a second choice even if the first choice was wrong
+        setTimeout(() => {
+            options.forEach((element) => {
+                element.disabled = false;
+            });
+            timerDisplay(); // Resumes the countdown after allowing a second choice
+        }, 1000);
     }
+
+    clearInterval(countdown); 
 }
 
 function initial() {
