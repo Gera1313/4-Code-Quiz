@@ -69,7 +69,7 @@ Ability to enter and save initials and score
 ## Links
 
 URL to the deployed site: 
-[Quiz Game URL](https://gera1313.github.io/4-Code-Quiz/)
+[Quiz Game URL](https://gera1313.github.io/Country-Quiz/)
 
 
 ## Credits
