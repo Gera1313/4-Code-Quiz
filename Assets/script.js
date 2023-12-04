@@ -158,51 +158,8 @@ function quizCreator() {
 }
 
 function checker(userOption) {
-  let userSolution = userOption.innerText;
-  let options = userOption.parentElement.querySelectorAll(".option-div");
-
-  if (userSolution === quizArray[questionCount].correct) {
-    userOption.classList.add("correct");
-    scoreCount++;
-  } else {
-    count -= 3; // Deducts seconds if wrong answer
-    userOption.classList.add("incorrect");
-
-    // Allow for a second choice even if the first choice was wrong
-    options.forEach((element) => {
-      element.disabled = true;
-    });
-
-    // Remove the "disabled" attribute after a short delay to allow for a second choice
-    setTimeout(() => {
-      options.forEach((element) => {
-        element.disabled = false;
-      });
-    }, 1000);
-  }
-  clearInterval(countdown);
-
-  // Check if the timer has reached 0 before revealing the correct answer
-  if (count <= 0) {
-    options.forEach((element) => {
-      if (element.innerText === quizArray[questionCount].correct) {
-        element.classList.add("correct");
-      }
-    });
-  }
+    
 }
-
-//     options.forEach((element) => {
-//       if (element.innerText === quizArray[questionCount].correct) {
-//         element.classList.add("correct");
-//       }
-//     });
-//   }
-
-//   options.forEach((element) => {
-//     element.disabled = true;
-//   });
-// }
 
 function initial() {
   quizContainer.innerHTML = "";
