@@ -1,6 +1,6 @@
-# Country Capitals Code Quiz
+# Country Capitals Quiz
 
-## The Task
+## The Project
 
 At some point in my journey to become a full-stack web developer, I will likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical assessment includes both multiple-choice questions and questions. I have created my own assessment based on this. 
 
@@ -54,7 +54,7 @@ Scoreboards
 
 11/25/23 UPDATE: Working on refactoring and fixing this web application. 
 
-12/4/23 UPDATE: All issues have been fixed and implemented new features. 
+12/4/23 UPDATE: All issues have been fixed and I implemented missing features. 
 
 New features: 
 
